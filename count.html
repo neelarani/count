@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Count</title>
+  <style>
+    body,
+    html {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: purple;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h2 {
+      color: white;
+      font-size: 4rem;
+    }
+
+    button {
+      background-color: white;
+      padding: 20px 30px;
+      border: none;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-left: 1rem;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 id="count">0</h2>
+    <button id="increement-btn">Increement</button>
+    <button id="decreement-btn">Decreement</button>
+  </div>
+
+  <!-- js code -->
+  <script>
+    let count = 0;
+    document.getElementById('increement-btn').addEventListener('click', function () {
+      count++;
+      document.getElementById('count').innerText = count;
+    });
+
+    document.getElementById('decreement-btn').addEventListener('click', function () {
+      count--;
+      document.getElementById('count').innerText = count;
+
+    });
+
+
+  </script>
+</body>
+
+</html>
